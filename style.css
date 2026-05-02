@@ -1,0 +1,877 @@
+#hero-slider{
+    margin: 180px auto 0;
+}
+
+/* Контейнер кастомной навигации */
+.custom-slider-nav {
+      display: flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    font-family: sans-serif;
+
+    margin: 0 auto;
+}
+
+/* Кнопки стрелок */
+.nav-arrow {
+  background: none;
+  border: none;
+  color: #a0a0a0; /* Серый цвет неактивных элементов */
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.nav-arrow:hover {
+  color: #FFDD00; /* Желтый цвет при наведении */
+}
+
+/* Цифры */
+.nav-num {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.current-num {
+  color: #FFCC00; /* Желтый акцент для текущего слайда */
+}
+
+.total-num {
+  color: #666666; /* Темно-серый для общего количества */
+}
+
+/* Прогресс-бар */
+.nav-progress-track {
+  width: 120px; /* Длина полоски */
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.15); /* Полупрозрачный фон */
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%; /* Ширина будет меняться через JS */
+  background-color: #FFCC00;
+  transition: width 0.4s ease-in-out; /* Плавная анимация заполнения */
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Замените на ваш шрифт, например Montserrat или Roboto */
+ 
+}
+
+/* Главная секция */
+.hero-section {
+    position: relative;
+    max-width: 1620px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 780px;
+    display: flex;
+    align-items: center;
+    
+    
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+ .aroow-wra{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+ }
+/* Затемняющий градиент, чтобы текст всегда был читаемым */
+
+
+/* Контейнер для выравнивания */
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2; /* Поднимаем текст над фоном и градиентом */
+}
+
+/* Блок с текстом */
+.hero-content {
+    position: relative;
+  max-width: 600px;
+}
+
+.hero-title {
+    font-family: var(--font-title);
+  color: #ffffff;
+  /* clamp делает шрифт адаптивным: минимум 32px, идеально 4vw, максимум 54px */
+  font-size: clamp(24px, 4vw, 48px);
+  font-weight: 800;
+  font-style: italic; /* Судя по макету, шрифт наклонный */
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.hero-text {
+    font-family: var(--font-main);
+  color: #ffffff;
+  font-size: clamp(16px, 1.5vw, 24px);
+  line-height: 1.4;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+/* Кнопка */
+.hero-btn {
+  display: inline-block;
+  background-color: #FFDE00; /* Желтый цвет из макета */
+  color: #111111;
+  padding: 14px 40px;
+  border-radius: 50px; /* Делает кнопку овальной */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(11px, 1.5vw, 16px);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e6c800;
+  transform: translateY(-2px);
+}
+
+/* Декоративная большая цифра */
+.hero-decor-number {
+  position: absolute;
+  right: -5%; /* Немного сдвигаем за край */
+  bottom: 10%; /* Сдвигаем вниз */
+  font-size: clamp(150px, 20vw, 300px); /* Огромный адаптивный размер */
+  font-weight: 900;
+  font-style: italic;
+  color: #FFDE00;
+  line-height: 0.8;
+  z-index: 1; /* Позади текста, но над фоном */
+  user-select: none; /* Запрещаем выделение текста */
+}
+.hero-decor-number img{
+    width: 410px;
+    height: 297px;
+}
+.slideer_hero{
+    position: absolute;
+    height: 100%;
+}
+/* --- Адаптивность для мобильных устройств --- */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 480px;
+    align-items:flex-start;
+    
+  }
+  #hero-slider{
+    margin: 80px auto 0;
+  }
+  
+  
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-decor-number {
+    /* На мобильных цифру можно сделать менее прозрачной или спрятать, чтобы не мешала тексту */
+    
+    right: 0;
+    bottom: 50px;
+    padding: 20px 0;
+  }
+.hero-container{
+    margin: 60px auto 0;
+} 
+
+.custom-slider-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+  .hero-decor-number img{
+    width: 215px;
+    height: 151px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Базовые настройки и переменные */
+:root {
+    --color-bg: #1C1C1C;
+    --color-text: #ffffff;
+    --color-text-muted: #ffffff;
+    --color-accent: #ffcc00; /* Желтый цвет из макета */
+    --color-accent-hover: #e6b800;
+    --color-card-bg: #1e1e1e;
+    --font-title: "Exo 2", sans-serif;
+    --font-main: 'Inter', sans-serif;
+    --container-max: 1140px;
+    --container-padding: 20px;
+    
+    --transition: 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    
+}
+
+.section {
+   
+        padding: 150px 0 0;
+    
+}
+
+.section__title {
+    font-family: var(--font-title);
+    font-size: clamp(24px, 4vw, 48px);
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    font-size:clamp(11px, 1vw, 16px);
+    font-weight: 400;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+    color: #000;
+}
+
+.btn--primary:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.btn--outline {
+    background-color: #1C1C1C;
+
+    color: #ffffff;
+}
+
+.btn--outline:hover {
+    background-color: #000;
+    color: var(--color-accent);
+}
+
+/* Шапка */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+    background: rgba(21, 21, 21, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header__link {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.header__link:hover {
+    color: var(--color-accent);
+}
+
+.header__contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Главный экран (Hero) */
+.hero {
+    position: relative;
+    
+    min-height: 780px;
+    max-width: 1614px;
+    margin: 180px auto;
+}
+
+.hero__slide {
+    height: 780px;
+    
+    display: flex;
+    align-items: center;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    
+}
+
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+   width: 1140px;
+}
+
+.hero__title {
+    max-width: 600px;
+    font-size: clamp(24px, 5vw, 48px);
+   
+    font-weight: 900;
+    font-style:italic;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-family: var(--font-title);
+}
+
+.hero__desc {
+    font-family: var(--font-main);
+    font-size: clamp(16px, 3vw, 24px);
+    color: var(--color-text-muted);
+    line-height: clamp(16px, 3vw, 35px);
+    margin-bottom: 40px;
+    max-width: 600px;
+    font-weight: 300;
+    
+}
+
+/* Направления */
+.directions__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(176px, 271px));
+    gap: 18px;
+}
+
+.directions__item {
+    position: relative;
+        width: 271px;
+    height: 400px;
+
+    background-color: var(--color-card-bg);
+    display: flex;
+    align-items: flex-end;
+    padding: 18px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.directions__item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    z-index: 1;
+}
+
+.directions__item_1{
+    background:url(./images/Rectangle\ 7.jpg);
+    background-size:cover;
+}
+.directions__item_2{
+    background:url(./images/Rectangle\ 8@2x.jpg);
+    background-size:cover;
+}
+.directions__item_3{
+    background:url(./images/Rectangle\ 9.jpg);
+    background-size:cover;
+}
+.directions__item_4{
+    background:url(./images/Rectangle\ 10.jpg);
+    background-size:cover;
+}
+.directions__item_5{
+    background:url(./images/Rectangle\ 11.jpg);
+    background-size:cover;
+}
+.directions__item_6{
+    background:url(./images/Rectangle\ 13.jpg);
+    background-size:cover;
+}
+.directions__item_7{
+    background:url(./images/Rectangle\ 12.jpg);
+    background-size:cover;
+}
+
+.directions__name {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-title);
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+      font-size: clamp(20px, 2vw, 24px);
+}
+
+.directions__item--accent {
+    background-color: var(--color-accent);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:end;
+    gap: 20px;
+    position: relative;
+    padding: 23px;
+}
+.directions__item--accent img{
+    position: absolute;
+    right: -18px;
+    top: -15px;
+}
+
+.directions__item--accent::before {
+    display: none;
+}
+
+.directions__accent-title {
+    color: #000;
+    font-size: clamp(20px, 2vw, 24px);
+    font-family: var(--font-title);
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/* Тренеры */
+.trainer-card {
+    text-align: center;
+    
+}
+
+.trainer-card__img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    filter: grayscale(100%);
+    transition: filter var(--transition);
+}
+
+.trainer-card:hover .trainer-card__img {
+    filter: grayscale(0%);
+}
+
+.trainer-card__name {
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.trainer-card__role {
+    font-size: clamp(11px, 2vw, 20px);
+    text-align: left;
+      font-weight: 400;
+}
+
+/* FAQ Аккордеон */
+.faq__item {
+   
+}
+.faq__question {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 1px solid #363A40;
+    font-size: clamp(11px, 1vw, 17px);
+    padding: 0 0 0 30px;
+    color:#ffffff;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.faq__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    font-size: 28px;
+    line-height: 1;
+    color: #1C1C1C;
+    transition: transform 0.3s;
+    background: linear-gradient(90deg, #FFDD00 0%, #FFBF00 100%);
+
+}
+
+.faq__item.active .faq__icon {
+    transform: rotate(45deg);
+}
+
+.faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.faq__answer p {
+    padding-bottom: 25px;
+    font-size: clamp(11px, 1vw, 17px);
+    color: #ffffff;
+    
+    padding-left: 5px;
+}
+
+/* Подвал */
+.footer {
+    background-color: #0d0d0d;
+    padding: 40px 0;
+    border-top: 1px solid #222;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 1150px) {
+
+.directions__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+}
+}
+/* Адаптив (Резиновость до 390px) */
+@media (max-width: 1024px) {
+    .header__nav {
+        display: none; /* Для мобильных здесь нужно добавить бургер-меню */
+    }
+    .directions__item {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    padding: 11px;
+    
+}
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0 0;
+    }
+    .header__contacts .btn {
+        display: none; /* Скрываем кнопку в шапке на мобилках, оставляем только телефон */
+    }
+    .directions__grid {
+        grid-template-columns: 1fr 1fr; /* На мобильном сетка в 1 колонку */
+        gap: 8px;
+        padding: 0 15px;
+    }
+    .directions__item {
+    position: relative;
+    width: 100%;
+    max-height: 290px;
+    
+    padding: 11px;
+    
+}
+.section__title {
+    padding: 0 15px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+picture img {
+    width: 100%;
+}
+
+
+.hero__title , .hero__desc{
+    max-width: 360px;
+}
+.directions__item--accent img{
+    width: 100px;
+        position: absolute;
+        right: -10px;
+        top: -15px;
+}
+.faq__list{
+padding: 0 15px;
+}
+.faq__question{
+    padding: 0 0 0 10px;
+    margin-bottom: 5px;
+}
+.trainer-card {
+    text-align: center;
+    padding: 15px;
+}
+}
+
+.splide__arrow {
+  align-items: center;
+   
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2em;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 1;
+    padding: 0;
+    position: absolute;
+    top: -80px;
+    
+    width: 2em;
+    z-index: 1;
+    
+    width: 53px;
+    height: 53px;
+    
+    background: linear-gradient(90deg, #FFDD00 0%, #FFBF00 100%);
+    
+}.splide__arrow:disabled
+
+ {
+    opacity: 1;
+    background:#181818;
+}
+.splide__arrow--prev {
+       right: 68px;
+    left: auto;
+
+}
+
+
+/* .tournaments-card{
+    height: 380px;
+} */
+
+.tournaments-card img{
+    height: 380px;
+}
+
+.tournaments-card h3{
+
+    font-size: clamp(14px, 2vw, 20px);
+    text-align: left;
+      font-weight: 600;
+      color:#ffffff;
+      margin-bottom: 20px;
+}
+.turnam_date, .turnam_locat{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+}
+.turnam_date p, .turnam_locat p{
+    font-weight: 400;
+      color:#ffffff;
+      font-size: clamp(9px, 2vw, 16px);
+}
+
+p.turnam_descr{
+    font-weight: 300;
+      color:#ffffff;
+      font-size: clamp(9px, 2vw, 16px);
+      margin-top: 8px;
+      margin-bottom: 20px;
+}
+
+
+.news-card img{
+    height: 300px;
+}
+.news.section{
+    padding: 60px 0;
+}
+.news .container{
+    margin: 0;
+}
+ .news .hero-btn{
+     background-color:transparent;
+    border:none;
+    color:#FFDD00;
+    text-decoration: underline;
+    padding: 0;
+   font-size: clamp(9px, 2vw, 16px);
+    font-weight: 400;
+ }
+.overlay_img{
+    position: relative;
+    background: #040404 url(./images/man-giving-punch\ 1.png);
+    background-size:cover;
+    max-width: 1630px;
+    margin: 150px auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+.overlay_img .hero-decor-number_two img{
+     position: absolute;
+ width: 340px;
+    height: 240px;
+    right: -180px;
+    
+    bottom: -180px;
+    z-index: -1;
+   
+}
+
+@media (max-width: 768px) {
+.splide__arrow {
+width: 32px;
+    height: 32px;
+top: -30px;
+}
+.splide__arrow--prev {
+       right: 50px;
+    left: auto;
+
+}
+.tournaments-card img{
+    height: 135px;
+}
+
+.news-card img{
+    height:135px;
+}
+.tournaments .container, .news .container{
+    padding: 0 15px;
+}
+.tournaments .splide__arrow--next, .news .splide__arrow--next{
+    right: 0;}
+.tournaments .splide__arrow--prev, .news .splide__arrow--prev{
+      right: 35px;
+}
+    .tournaments .section__title , .news .section__title{
+    padding: 0;
+    
+}
+.tournaments-card h3{
+
+   margin-top: -10px;
+      margin-bottom: 5px;
+}
+.turnam_date, .turnam_locat{
+ 
+    margin-bottom: 5px;
+
+}
+
+p.turnam_descr{
+   
+     margin-top: 0;
+      margin-bottom: 5px;
+}
+.tournaments-card .hero-btn{
+    background-color:transparent;
+    border:none;
+    color:#FFDD00;
+    text-decoration: underline;
+    padding: 0;
+    font-size: 9px;
+    font-weight: 400;
+}
+.overlay_img {
+    max-width: 100%;
+    margin: 60px 0;
+}
+.overlay_img .hero-decor-number_two{
+    display: none;
+}
+.news.section {
+    padding: 30px 0;
+}
+}
