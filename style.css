@@ -624,8 +624,8 @@ picture img {
         right: -10px;
         top: -15px;
 }
-.faq__list{
-padding: 0 15px;
+.faq__list, .faq__list .section__title{
+padding: 0;
 }
 .faq__question{
     padding: 0 0 0 10px;
