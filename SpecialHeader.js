@@ -68,7 +68,7 @@ class SpecialHeader extends HTMLElement {
     <header class="header-mobile">
         <a href="#" class="logo-mobile">
             <!-- Замените src на путь к вашему логотипу -->
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='50'><rect width='60' height='50' fill='%23333'/><text x='10' y='30' fill='%23fff' font-family='Arial' font-size='10'>ЛОГО</text></svg>" alt="Анкалав 47">
+            <img src="./images/logo.svg" alt="Анкалав 47">
         </a>
         
         <div class="mobile-contact">

@@ -114,7 +114,7 @@
             width: auto;
         }
 
-        header .btn {
+        header .btn , .mobile-nav-list .btn{
             background-color: var(--accent);
             color: #000;
             padding: 12px 24px;
@@ -235,8 +235,8 @@
         .mobile-nav-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            font-size: 20px;
+            gap: 10px;
+            font-size: 14px;
             text-align: center;
         }
 
@@ -263,13 +263,21 @@
         }
 
         .modal-content {
-            background-color: #363A40;
             padding: 50px 35px;
-            border-radius: 20px;
             width: 100%;
             max-width: 480px;
             position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+
+
+            background: rgba(73, 73, 73, 0.4);
+            border: 1px solid #363A40;
+            backdrop-filter: blur(10px);
+            /* Note: backdrop-filter has minimal browser support */
+            border-radius: 20px;
+
+
+
         }
 
         .close-modal-btn {
@@ -348,12 +356,16 @@
         /* --- MEDIA QUERIES --- */
         @media (max-width: 992px) {
             body {
-                padding-top: 80px;
+               
             }
             .header {
                 display: none;
             }
             .header-mobile {
                 display: flex;
+            }
+            .mobile-nav-list .btn{
+                max-width: 240px;
+
             }
         }
