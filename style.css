@@ -638,9 +638,7 @@ padding: 0;
     text-align: center;
     padding: 0 15px;
 }
-.map .section__title{
-    margin: 0 0 10px;
-}
+
 }
 
 .splide__arrow {
@@ -941,5 +939,8 @@ p.turnam_descr{
 }
 .news.section {
     padding: 30px 0;
+}
+.map .section__title{
+    margin: 0 0 10px;
 }
 }
