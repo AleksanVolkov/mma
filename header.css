@@ -6,7 +6,8 @@
             --text-sub: #9e9e9e;
             --border-color: #ffffff2a;
             --font-main: 'Inter';
-        }
+             --font-title: "Exo 2", sans-serif;
+}
 
         
 
@@ -141,7 +142,7 @@
         }
 
         .nav-item {
-            font-size: 14px;
+            font-size: clamp(12px, 2vw, 16px);
         }
 
         .nav-item.has-dropdown {
@@ -262,11 +263,11 @@
         }
 
         .modal-content {
-            background-color: #2a2a2a;
-            padding: 40px;
-            border-radius: 15px;
+            background-color: #363A40;
+            padding: 50px 35px;
+            border-radius: 20px;
             width: 100%;
-            max-width: 400px;
+            max-width: 480px;
             position: relative;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
@@ -286,11 +287,14 @@
         }
 
         .modal-content h2 {
-            font-size: 18px;
+            font-size: clamp(16px, 4vw, 24px);
+            font-family: var(--font-title);
             text-transform: uppercase;
+            font-style: italic;
             text-align: center;
             margin-bottom: 25px;
-            line-height: 1.4;
+            line-height: 1;
+            text-align: left;
         }
 
         .form-group {
@@ -300,22 +304,27 @@
         .form-input {
             width: 100%;
             padding: 15px 20px;
-            background-color: #1f1f1f;
+            background-color: #19191966;
             border: 1px solid #333;
             border-radius: 25px;
-            color: var(--text-main);
-            font-size: 14px;
+            font-weight: 300;
+            color:#ffffff;
+            font-size: clamp(12px, 1vw, 16px);
             outline: none;
         }
 
         .form-input::placeholder {
-            color: var(--text-sub);
+            color: #ffffffb2;
         }
 
         .modal-content .btn {
+            /* Rectangle 16 */
+
+
+            background: linear-gradient(90deg, #FFDD00 0%, #FFBF00 100%);
+            border-radius: 90px;
             width: 100%;
-            margin-top: 10px;
-            padding: 15px;
+
         }
 
         .checkbox-group {
