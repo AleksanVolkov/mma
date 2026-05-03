@@ -21,13 +21,10 @@
       <li class="splide__slide">
         <section class="hero-section ">
            <picture class="slideer_hero">
-  <!-- Картинка для десктопа (ширина экрана от 768px) -->
-  <source srcset="./images/Frame125.jpg" media="(min-width: 760px)">
-  
-  <!-- Картинка для мобильных (по умолчанию для экранов меньше 768px) -->
-  <img src="./images/Frame 127 (1).jpg" alt="Описание изображения" >
-</picture>
-        <section class="hero-section ">
+                <source srcset="./images/Frame125.jpg" media="(min-width: 760px)">
+                <img src="./images/Frame 127 (1).jpg" alt="Описание изображения" >
+            </picture>
+        <!-- <section class="hero-section "> -->
             <div class="hero-container">
                 <div class="hero-content">
                     <h1 class="hero-title">
@@ -152,6 +149,7 @@
 
         <!-- Тренеры (Слайдер) -->
         <section class="trainers section" id="trainers">
+            <img src="./images/New Project (3) 1.png" alt="" class="decor_trainer">
             <div class="container">
                 <div class="section__header">
                     <h2 class="section__title">НАШИ ТРЕНЕРЫ</h2>
@@ -200,29 +198,52 @@
         </section>
 
         <!-- FAQ (Аккордеон) -->
-        <section class="faq section" id="faq">
-            <div class="container">
-                <h2 class="section__title">ЧАСТО СПРАШИВАЮТ</h2>
-                <div class="faq__list">
-                    <div class="faq__item">
-                        <button class="faq__question">Что нужно брать на первую тренировку? <span class="faq__icon">+</span></button>
-                        <div class="faq__answer"><p>Удобную спортивную форму, сменную обувь (или босиком для татами), полотенце и воду.</p></div>
+
+<section class="tournaments_pre section" >
+            <div class="container img_grid ">
+                <div class="two_col_img">
+                    <div class="col_img col_one">
+                        <img src="./images/Rectangle 4448.jpg" alt="">
+                        <img src="./images/Rectangle 4445.jpg" alt="">
                     </div>
-                    <div class="faq__item">
-                        <button class="faq__question">Есть ли возрастные ограничения? <span class="faq__icon">+</span></button>
-                        <div class="faq__answer"><p>Мы принимаем в секции детей от 6 лет и взрослых без верхнего ограничения по возрасту (при отсутствии медицинских противопоказаний).</p></div>
+                    <div class=" col_img col_two">
+                        <img src="./images/Rectangle 4446.jpg" alt="">
+                        <img src="./images/Rectangle 4447.jpg" alt="">
                     </div>
-                    <div class="faq__item">
-                        <button class="faq__question">Что нужно брать на первую тренировку? <span class="faq__icon">+</span></button>
-                        <div class="faq__answer"><p>Удобную спортивную форму, сменную обувь (или босиком для татами), полотенце и воду.</p></div>
-                    </div>
-                    <div class="faq__item">
-                        <button class="faq__question">Есть ли возрастные ограничения? <span class="faq__icon">+</span></button>
-                        <div class="faq__answer"><p>Мы принимаем в секции детей от 6 лет и взрослых без верхнего ограничения по возрасту (при отсутствии медицинских противопоказаний).</p></div>
+                </div>
+                <h2 class="section__title">о клубе</h2>
+                <div class="col_img col_three">
+                    
+                    <p class="turnam_descr">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.<br>
+
+                    To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure.  </p>
+
+                    <div class="icon_rov">
+                        <div class="icon_box">
+                                <img src="./images/bicep 1.svg" alt="">
+                                <div class="icon_title">
+                                    Наша команда
+                                </div>
+                                <div class="icon_descr">
+                                    Профессиональные тренеры, победители международных турниров.
+                                </div>
+                        </div>
+                         <div class="icon_box">
+                                <img src="./images/ticket 1.svg" alt="">
+                                <div class="icon_title">
+                                    Абонементы
+                                </div>
+                                <div class="icon_descr">
+                                    В нашем клубе вы можете оформить абонемент на различные виды тренировок по привлекательной цене!
+                                </div>
+                        </div>
+                    
+                        
                     </div>
                 </div>
             </div>
         </section>
+
 
         <section class="tournaments section" id="tournaments">
             <div class="container ">
@@ -280,9 +301,10 @@
                 </div>
             </div>
         </section>
-<div class="overlay_img">
-    <div class="hero-decor-number_two"><img src="./images/New Project (3) 1.png" alt=""></div>
-    <section class="news section" id="news">
+
+        <div class="overlay_img">
+            <img class="hero-decor-number_two" src="./images/New Project (3) 1.png" alt="">
+            <section class="news section" id="news">
             <div class="container ">
                 <div class="section__header">
                     <h2 class="section__title">последние новости</h2>
@@ -330,8 +352,33 @@
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
         </div>
+
+
+        <section class="faq section" id="faq">
+            <div class="container">
+                <h2 class="section__title">ЧАСТО СПРАШИВАЮТ</h2>
+                <div class="faq__list">
+                    <div class="faq__item">
+                        <button class="faq__question">Что нужно брать на первую тренировку? <span class="faq__icon">+</span></button>
+                        <div class="faq__answer"><p>Удобную спортивную форму, сменную обувь (или босиком для татами), полотенце и воду.</p></div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__question">Есть ли возрастные ограничения? <span class="faq__icon">+</span></button>
+                        <div class="faq__answer"><p>Мы принимаем в секции детей от 6 лет и взрослых без верхнего ограничения по возрасту (при отсутствии медицинских противопоказаний).</p></div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__question">Что нужно брать на первую тренировку? <span class="faq__icon">+</span></button>
+                        <div class="faq__answer"><p>Удобную спортивную форму, сменную обувь (или босиком для татами), полотенце и воду.</p></div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__question">Есть ли возрастные ограничения? <span class="faq__icon">+</span></button>
+                        <div class="faq__answer"><p>Мы принимаем в секции детей от 6 лет и взрослых без верхнего ограничения по возрасту (при отсутствии медицинских противопоказаний).</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
