@@ -624,7 +624,10 @@ picture img {
         right: -10px;
         top: -15px;
 }
-.faq__list, .faq__list .section__title{
+.faq__list{
+padding: 0;
+}
+.faq .section__title{
 padding: 0;
 }
 .faq__question{
@@ -634,6 +637,9 @@ padding: 0;
 .trainer-card {
     text-align: center;
     padding: 0 15px;
+}
+.map .section__title{
+    margin: 0 0 10px;
 }
 }
 
