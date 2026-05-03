@@ -861,6 +861,9 @@ grid-row: 1 / span 2;
 .col_three{
     flex:0 55%;
 }
+.faq.section{
+    padding: 0;
+}
 @media (max-width:1650px){
     .overlay_img{
    
