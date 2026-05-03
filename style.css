@@ -842,6 +842,10 @@ grid-row: 1 / span 2;
 
 }
 @media (max-width: 768px) {
+
+    .map_filter{
+        padding: 0 15px;
+    }
 .col_img img{
     max-width: 100%;
 }
