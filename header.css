@@ -21,7 +21,7 @@
 
 .nav-item {
   position: relative; /* Важно для позиционирования меню */
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   cursor: pointer;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .dropdown-menu li a {
-  padding: 12px 16px;
+  padding: 2px 6px;
   text-decoration: none;
   display: block;
   color: #ffffff;
@@ -62,7 +62,19 @@
   display: block;
 }
 
-        
+   .nav-item.has-dropdown .nav-link::after {
+            content: '▼';
+            font-size: 10px;
+            color: var(--text-sub);
+        }
+
+
+
+/* Когда меню открыто, переворачиваем стрелку */
+.nav-item.is-open .arrow {
+  transform: rotate(180deg);
+}
+ 
 
 
         * {
@@ -205,11 +217,7 @@
             cursor: pointer;
         }
 
-        .nav-item.has-dropdown::after {
-            content: '▼';
-            font-size: 10px;
-            color: var(--text-sub);
-        }
+      
 
         /* --- MOBILE HEADER --- */
         .header-mobile {
@@ -420,3 +428,35 @@
 
             }
         }
+
+        @media (max-width: 768px) {
+  .dropdown-menu {
+    position: static; /* Меню будет раздвигать контент вниз, а не лежать поверх */
+    display: none;    /* По умолчанию скрыто */
+    width: 100%;
+    box-shadow: none;
+    background: #1c1c1c;
+  }
+
+  /* Класс, который будет добавлять JavaScript */
+  .nav-item.is-open .dropdown-menu {
+    display: block;
+  }
+
+  .nav-item.has-dropdown {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+          .nav-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+.nav-item.has-dropdown .nav-link{
+    font-size: 14px;
+}
+}       
