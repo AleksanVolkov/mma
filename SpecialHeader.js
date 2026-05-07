@@ -52,7 +52,16 @@ class SpecialHeader extends HTMLElement {
             <nav class="header-bottom">
                 <ul class="nav-list">
                     <li><a href="#" class="nav-item">О клубе</a></li>
-                    <li><div class="nav-item has-dropdown">Направления</div></li>
+                    <ul class="nav-list">
+                        <li class="nav-item has-dropdown">
+                        <span class="nav-link">Направления</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="./napravlenie.html">Бокс</a></li>
+                                <li><a href="#">Кикбоксинг</a></li>
+                                <li><a href="#">Дзюдо</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                     <li><a href="#" class="nav-item">Тренеры</a></li>
                     <li><a href="#" class="nav-item">Абонементы</a></li>
                     <li><a href="#" class="nav-item">Расписание</a></li>
@@ -95,7 +104,16 @@ class SpecialHeader extends HTMLElement {
         </div>
         <ul class="mobile-nav-list">
             <li><a href="#">О клубе</a></li>
-            <li><a href="#">Направления</a></li>
+            <ul class="nav-list">
+                        <li class="nav-item has-dropdown">
+                        <span class="nav-link">Направления</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="./napravlenie.html">Бокс</a></li>
+                                <li><a href="#">Кикбоксинг</a></li>
+                                <li><a href="#">Дзюдо</a></li>
+                            </ul>
+                        </li>
+                    </ul>
             <li><a href="#">Тренеры</a></li>
             <li><a href="#">Абонементы</a></li>
             <li><a href="#">Расписание</a></li>

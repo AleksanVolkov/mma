@@ -9,6 +9,59 @@
              --font-title: "Exo 2", sans-serif;
 }
 
+
+
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-item {
+  position: relative; /* Важно для позиционирования меню */
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  
+}
+
+/* Стили выпадающего меню */
+.dropdown-menu {
+  display: none; /* Скрываем по умолчанию */
+  position: absolute;
+  top: 100%; /* Показываем сразу под родительским элементом */
+  left: 0;
+  background-color:#1c1c1c;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.dropdown-menu li a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #ffffff;
+}
+
+/* Эффект при наведении */
+.dropdown-menu li a:hover {
+  background-color: #2b2b2b;
+}
+
+/* ГЛАВНОЕ: показываем меню при наведении на родителя */
+.has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
         
 
 
@@ -355,9 +408,7 @@
 
         /* --- MEDIA QUERIES --- */
         @media (max-width: 992px) {
-            body {
-               
-            }
+            
             .header {
                 display: none;
             }
