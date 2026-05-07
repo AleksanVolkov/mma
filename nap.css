@@ -1,0 +1,63 @@
+.breadcrumbs{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    gap: 5px;
+    max-width: 1170px;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 auto;
+}
+.separator{
+   width: 11px;
+   height: 11px;
+   background-size:cover;
+   background:url(./images/fi_2985150.svg)
+}
+.directions_item{
+    
+    margin: 80px auto 0;
+}
+.breadcrumbs_home{
+    color:#FFDD00;
+    text-decoration: underline;
+}
+.first_row{
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:flex-start;
+    gap: 20px;
+    grid-template-rows: auto 1fr;
+    position: relative;
+    
+}
+.first_row .img_absolute{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 400px;
+    height: 260px;
+    transform: translate(90%, -50%);
+}
+.first_row img{
+    object-fit: cover;
+    width: 100%;
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 1;
+
+}
+.first_row .section__title{
+    margin-bottom: 0;
+    padding-top: 65px;
+}
+
+.descr_box{
+    grid-column: 1 / span 1;
+}
+
+.second_row{
+    display: flex;
+    margin-top: 90px;
+    gap: 20px;
+}
