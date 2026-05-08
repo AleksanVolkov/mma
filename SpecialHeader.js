@@ -62,7 +62,7 @@ class SpecialHeader extends HTMLElement {
                             </ul>
                         </li>
                     </ul>
-                    <li><a href="#" class="nav-item">Тренеры</a></li>
+                    <li><a href="./coaches.html" class="nav-item">Тренеры</a></li>
                     <li><a href="#" class="nav-item">Абонементы</a></li>
                     <li><a href="#" class="nav-item">Расписание</a></li>
                     <li><a href="#" class="nav-item">Галерея</a></li>
@@ -114,7 +114,7 @@ class SpecialHeader extends HTMLElement {
                             </ul>
                         </li>
                     </ul>
-            <li><a href="#">Тренеры</a></li>
+            <li><a href="./coaches.html">Тренеры</a></li>
             <li><a href="#">Абонементы</a></li>
             <li><a href="#">Расписание</a></li>
             <li><a href="#">Галерея</a></li>

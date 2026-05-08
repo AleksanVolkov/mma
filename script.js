@@ -1,54 +1,56 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // 1. Инициализация слайдера
-  const splide = new Splide('#hero-slider', {
-    type: 'fade',       // Для главного баннера обычно используется fade
-    rewind: true,       // Зацикливание
-    arrows: false,      // Отключаем стандартные стрелки
-    pagination: false,  // Отключаем стандартные точки
+  // 1. Ищем основной контейнер слайдера
+  const sliderEl = document.querySelector('#hero-slider');
+
+  // Если слайдера нет на странице — просто выходим из функции
+  if (!sliderEl) return;
+
+  // 2. Инициализация слайдера (передаем найденный элемент, а не селектор)
+  const splide = new Splide(sliderEl, {
+    type: 'fade',
+    rewind: true,
+    arrows: false,
+    pagination: false,
     speed: 800,
   });
 
-  // 2. Получаем элементы нашей кастомной навигации
+  // 3. Получаем элементы кастомной навигации
   const currentNumEl = document.querySelector('.current-num');
   const totalNumEl = document.querySelector('.total-num');
   const progressFill = document.querySelector('.nav-progress-fill');
   const prevBtn = document.querySelector('.prev-arrow');
   const nextBtn = document.querySelector('.next-arrow');
 
-  // Вспомогательная функция для добавления "0" спереди (1 -> 01)
   function formatNumber(number) {
     return number < 10 ? '0' + number : number;
   }
 
-  // 3. Функция обновления UI
+  // 4. Функция обновления UI с проверкой на наличие элементов
   function updateSliderNav() {
     const total = splide.length;
-    const current = splide.index + 1; // Индекс начинается с 0, поэтому +1
+    const current = splide.index + 1;
 
-    // Обновляем текст
-    currentNumEl.textContent = formatNumber(current);
-    totalNumEl.textContent = formatNumber(total);
+    if (currentNumEl) currentNumEl.textContent = formatNumber(current);
+    if (totalNumEl) totalNumEl.textContent = formatNumber(total);
 
-    // Вычисляем процент заполнения прогресс-бара
-    const progressRate = current / total;
-    progressFill.style.width = (progressRate * 100) + '%';
+    if (progressFill) {
+      const progressRate = current / total;
+      progressFill.style.width = (progressRate * 100) + '%';
+    }
   }
 
-  // 4. Привязываем события Splide
-  // Событие 'mounted' срабатывает при загрузке, 'moved' - после смены слайда
+  // 5. Привязываем события и монтируем
   splide.on('mounted move', updateSliderNav);
-
-  // Монтируем слайдер
   splide.mount();
 
-  // 5. Привязываем клики по нашим кастомным стрелкам к методам Splide
-  prevBtn.addEventListener('click', () => {
-    splide.go('<'); // Идем на предыдущий
-  });
+  // 6. Безопасная привязка кликов
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => splide.go('<'));
+  }
 
-  nextBtn.addEventListener('click', () => {
-    splide.go('>'); // Идем на следующий
-  });
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => splide.go('>'));
+  }
 });
 
     // 2. Инициализация слайдера тренеров
@@ -56,6 +58,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 if (trainersSliderElem) {
     new Splide(trainersSliderElem, {
+        type: 'slide',
+        perPage: 3,
+        gap: '12px',
+        pagination: false,
+        arrows: true,
+        breakpoints: {
+            1024: {
+                perPage: 2,
+            },
+            768: {
+                perPage: 1,
+                gap: 0,
+                // Настройки сетки должны быть внутри объекта grid
+                grid: {
+                    rows: 3, 
+                    cols: 1,
+                    gap: {
+                        row: '10px',
+                        col: '0px',
+                    },
+                },
+            },
+        },
+    }).mount(window.splide.Extensions); // ВАЖНО: монтируем с расширениями
+}
+
+ // 3. Инициализация слайдера тренеров на странице тренеров
+    const trainersSliderElemPage = document.querySelector('#coaches-slider');
+
+if (trainersSliderElemPage) {
+    new Splide(trainersSliderElemPage, {
         type: 'slide',
         perPage: 3,
         gap: '12px',

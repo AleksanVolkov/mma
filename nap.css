@@ -87,6 +87,25 @@
    grid-row: 2 / span 1;
    grid-column: 1/ span 1;
 }
+.stars_card_wrapper{
+    display: flex;
+    gap: 22px;
+}
+.stars_card_item{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.stars_card_item img{
+    width: 100%;
+    object-fit: cover;
+
+}
+.flex_row{
+    display: flex;
+   
+    gap: 20px;
+}
 @media(max-width:760px){
     .breadcrumbs{
         margin: 40px auto 30px;
@@ -116,6 +135,11 @@
    flex-direction: column;
    margin-top: 20px;
 }
+
+.flex_row{
+    flex-direction: column;
+   margin-top: 20px;
+}
 .trainer_preview{
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto 1fr;
@@ -134,5 +158,14 @@
 .trainer_preview .turnam_descr {
     grid-row: 4 / span 1;
     grid-column: 1 / span 1;
+}
+.stars_card_wrapper {
+    display: flex;
+    gap: 10px;
+}
+.stars_card_item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 }

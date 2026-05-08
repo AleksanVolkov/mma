@@ -837,7 +837,7 @@ grid-row: 1 / span 2;
     margin: 0 auto 50px;
 }
 .map .section__title{
-    max-width: var(--container-max);
+    max-width: 1170px;
     margin: 0 auto;
 }
 .splide__arrow--next {
@@ -846,12 +846,26 @@ grid-row: 1 / span 2;
 
 
 
+.news-card h3, .stars_card_item h3{
+     font-size: clamp(14px, 2vw, 20px);
+      font-weight: 700;
 
+}
 
+.coaches__slider{
+    position: relative;
+}
+.decor_coaches{
+  position: absolute;
+    top: 0;
+    right: -410px;
+    width: 410px;
+    height: 290px;
+}
 
-
-
-
+.coaches.section{
+    padding: 0;
+}
 
 
 @media (max-width:1650px){
