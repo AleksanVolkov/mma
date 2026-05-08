@@ -601,7 +601,7 @@ a {
     .directions__grid {
         grid-template-columns: 1fr 1fr; /* На мобильном сетка в 1 колонку */
         gap: 8px;
-        padding: 0 15px;
+        /* padding: 0 15px; */
     }
     .directions__item {
     position: relative;
@@ -612,7 +612,7 @@ a {
     
 }
 .section__title {
-    padding: 0 15px;
+    /* padding: 0 15px; */
     margin-bottom: 10px;
     font-weight: 800;
 }
@@ -643,7 +643,7 @@ padding: 0;
 }
 .trainer-card {
     text-align: center;
-    padding: 0 15px;
+    /* padding: 0 15px; */
 }
 
 }
@@ -856,9 +856,12 @@ grid-row: 1 / span 2;
 
 }
 @media (max-width: 768px) {
+    .map{
+        padding: 60px 15px 0;
+    } 
 
     .map_filter{
-        padding: 0 15px;
+        padding: 0 ;
     }
 .col_img img{
     max-width: 100%;
