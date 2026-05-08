@@ -515,7 +515,7 @@ a {
     font-weight: 700;
     margin-bottom: 10px;
     text-align: left;
-    text-transform: uppercase;
+    
 }
 
 .trainer-card__role {
@@ -843,6 +843,17 @@ grid-row: 1 / span 2;
 .splide__arrow--next {
     right: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:1650px){
     .overlay_img{
    
