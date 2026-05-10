@@ -136,6 +136,9 @@ body {
   margin-bottom: 24px;
 }
 
+.rank_title{
+    margin-top: 20px;
+}
 .hero-text {
     font-family: var(--font-main);
   color: #ffffff;
@@ -183,6 +186,9 @@ body {
 .slideer_hero{
     position: absolute;
     height: 100%;
+}
+.coaches .section__title{
+    margin-bottom: 0;
 }
 /* --- Адаптивность для мобильных устройств --- */
 @media (max-width: 768px) {
@@ -851,7 +857,11 @@ grid-row: 1 / span 2;
       font-weight: 700;
 
 }
-
+.coache_box{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
 .coaches__slider{
     position: relative;
 }
@@ -866,14 +876,44 @@ grid-row: 1 / span 2;
 .coaches.section{
     padding: 0;
 }
-
-
+.av_icon{
+    background:url(./images/winning\ 1.svg);
+    background-size:cover;
+    width: 48px;
+    height: 48px;
+}
+.awards_wrapper{
+    display: grid;
+    gap: 30px 20px;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: max-content;
+}
+.container p{
+    font-size: clamp(16px, 2vw, 24px);
+    font-weight: 500;
+    
+}
+.awards{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 20px;
+}
+.awards p{
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 400;
+    line-height: 24px;
+}
 @media (max-width:1650px){
     .overlay_img{
    
     max-width: 100%;
    
     
+}
+
+.decor_coaches{
+  display: none;
 }
 .decor_trainer,.hero-decor-number_two, .decor_tournaments{
     display: none;
@@ -980,5 +1020,14 @@ p.turnam_descr{
 }
 .map .section__title{
     margin: 0 0 10px;
+}
+.coache_box{
+    flex-direction: column;
+}
+.awards_wrapper {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
 }
 }

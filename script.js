@@ -90,15 +90,24 @@ if (trainersSliderElem) {
 if (trainersSliderElemPage) {
     new Splide(trainersSliderElemPage, {
         type: 'slide',
-        perPage: 3,
+        perPage: 1,
+        grid: {
+                    rows: 2, 
+                    cols: 3,
+                    gap: {
+                        row: '30px',
+                        col: '20px',
+                    },
+                },
         gap: '12px',
         pagination: false,
-        arrows: true,
+        arrows: false,
         breakpoints: {
             1024: {
-                perPage: 2,
+                arrows: true,
+                perPage: 1,
             },
-            768: {
+            600: {
                 perPage: 1,
                 gap: 0,
                 // Настройки сетки должны быть внутри объекта grid
