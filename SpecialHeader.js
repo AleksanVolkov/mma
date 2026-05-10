@@ -28,7 +28,7 @@ class SpecialHeader extends HTMLElement {
                 </div>
 
                 <!-- Center Logo -->
-                <a href="#" class="logo-center">
+                <a href="./index.html" class="logo-center">
                     <!-- Замените src на путь к вашему логотипу -->
                     <img src="./images/logo.svg" alt="Анкалав 47">
                 </a>
@@ -75,7 +75,7 @@ class SpecialHeader extends HTMLElement {
 
     <!-- Mobile Header -->
     <header class="header-mobile">
-        <a href="#" class="logo-mobile">
+        <a href="./index.html" class="logo-mobile">
             <!-- Замените src на путь к вашему логотипу -->
             <img src="./images/logo.svg" alt="Анкалав 47">
         </a>
