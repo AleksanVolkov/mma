@@ -888,8 +888,9 @@ grid-row: 1 / span 2;
     grid-template-columns: auto auto auto ;
     grid-template-rows: max-content;
 }
-.container p{
-   пшк */
+.rank_title{
+    font-size: clamp(16px, 2vw, 24px);
+    font-weight: 500;
     
 }
 .awards{
@@ -902,6 +903,35 @@ grid-row: 1 / span 2;
     font-size: clamp(11px, 1vw, 16px);
     font-weight: 400;
     line-height: 24px;
+}
+
+
+.yellow_border{
+    display: flex;
+    box-sizing: border-box;
+    border: 1px dashed #FFDD00;
+    padding: 30px 100px;
+    gap: 10px;
+    margin-top: 30px;
+
+
+}
+.yellow_border span{
+    font-weight: 700;
+    font-size: clamp(11px, 1vw, 16px);
+    line-height: 19px;
+    color: #FFDD00;
+}
+.yellow_border p{
+    font-weight: 400;
+    font-size: clamp(11px, 1vw, 16px);
+    line-height: 19px;
+    color: #FFFFFF;
+}
+.yellow_imgText{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
 }
 @media (max-width:1650px){
     .overlay_img{
@@ -916,6 +946,26 @@ grid-row: 1 / span 2;
 }
 .decor_trainer,.hero-decor-number_two, .decor_tournaments{
     display: none;
+}
+.yellow_border{
+    display: flex;
+    box-sizing: border-box;
+    border: 1px dashed #FFDD00;
+    padding: 10px;
+    gap: 10px;
+    margin-top: 20px;
+
+
+}
+.yellow_imgText{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+.decor_two{
+    width: 20px;
+    
 }
 
 }
