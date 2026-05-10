@@ -889,8 +889,7 @@ grid-row: 1 / span 2;
     grid-template-rows: max-content;
 }
 .container p{
-    font-size: clamp(16px, 2vw, 24px);
-    font-weight: 500;
+   пшк */
     
 }
 .awards{
