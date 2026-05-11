@@ -66,7 +66,7 @@ class SpecialHeader extends HTMLElement {
                     <li><a href="#" class="nav-item">Абонементы</a></li>
                     <li><a href="#" class="nav-item">Расписание</a></li>
                     <li><a href="#" class="nav-item">Галерея</a></li>
-                    <li><a href="#" class="nav-item">Новости</a></li>
+                    <li><a href="./news.html" class="nav-item">Новости</a></li>
                     <li><a href="#" class="nav-item">Контакты</a></li>
                 </ul>
             </nav>
@@ -118,7 +118,7 @@ class SpecialHeader extends HTMLElement {
             <li><a href="#">Абонементы</a></li>
             <li><a href="#">Расписание</a></li>
             <li><a href="#">Галерея</a></li>
-            <li><a href="#">Новости</a></li>
+            <li><a href="./news.html">Новости</a></li>
             <li><a href="#">Контакты</a></li>
             <!-- Кнопка в мобильном меню, если нужна -->
             <li style="margin-top: 20px;">

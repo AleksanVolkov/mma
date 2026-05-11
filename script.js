@@ -150,9 +150,48 @@ if (turnirsSliderElem) {
 }
 // 3. Инициализация слайдера новости (без сетки)
 const newsSliderElem = document.querySelector('#news-slider');
+const parentt= document.querySelector('.news_page'); 
 
-if (newsSliderElem) {
+
+
+if (newsSliderElem.parentElement.parentElement === parentt) {
     new Splide(newsSliderElem, {
+        type   : 'slide',
+        perPage: 1, 
+        grid: {
+                    rows: 3, 
+                    cols: 3,
+                    gap: {
+                        row: '280px',
+                        col: '12px',
+                    },
+                },     // 3 карточки на десктопе
+    
+        pagination: false,
+        arrows : false,
+        breakpoints: {
+            1024: {
+                perPage: 1,
+                grid: {
+                    rows: 3, 
+                    cols: 1,
+                    gap: {
+                        row: '12px',
+                        col: '12px',
+                    },
+                }, 
+                arrows : true, // 2 карточки на планшетах
+            },
+            
+            // 768: {
+            //     perPage: 2, // 1 карточка на мобильных
+            //     gap    : '10px', // небольшой отступ, чтобы было видно край следующего слайда (опционально)
+            // },
+        }
+    }).mount(window.splide.Extensions); // Здесь Extensions больше не нужны, если Grid не используется
+}else if( newsSliderElem){
+
+new Splide(newsSliderElem, {
         type   : 'slide',
         perPage: 3,      // 3 карточки на десктопе
         gap    : '12px',

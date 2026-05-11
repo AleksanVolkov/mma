@@ -190,6 +190,8 @@ body {
 .coaches .section__title{
     margin-bottom: 0;
 }
+
+
 /* --- Адаптивность для мобильных устройств --- */
 @media (max-width: 768px) {
   .hero-section {
@@ -1914,3 +1916,7 @@ opacity: 0.6;
 }       
 
 /*end-------*/
+
+.news_page .container{
+    margin: 0 auto;
+}
