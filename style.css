@@ -1080,3 +1080,837 @@ p.turnam_descr{
     grid-template-rows: auto auto auto;
 }
 }
+
+
+/*nap scc*/
+.breadcrumbs{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    gap: 5px;
+    max-width: 1170px;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 80px auto 50px;
+}
+.separator{
+   width: 11px;
+   height: 11px;
+   background-size:cover;
+   background:url(./images/fi_2985150.svg)
+}
+.directions_item{
+    
+    margin: 80px auto 0;
+}
+.breadcrumbs_home{
+    color:#FFDD00;
+    text-decoration: underline;
+}
+.first_row{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:flex-start;
+    gap: 20px;
+    grid-template-rows: auto 1fr;
+    position: relative;
+    
+}
+.first_row .img_absolute{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 400px;
+    height: 260px;
+    transform: translate(90%, -50%);
+}
+.first_row img{
+    object-fit: cover;
+    width: 100%;
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 1;
+
+}
+.first_row .section__title{
+    margin-bottom: 0;
+    padding-top: 65px;
+}
+
+.descr_box{
+    grid-column: 1 / span 1;
+}
+
+.second_row{
+    display: flex;
+    margin-top: 90px;
+    gap: 20px;
+}
+
+.trainer_name_box{
+    display: flex;
+    flex-direction: column;
+    grid-row: 1/span 1;
+    grid-column: 1/ span 1;
+}
+.trainer_preview{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr ;
+    gap: 20px;
+}
+.trainer_foto{
+    grid-row: 1/span 3;
+    grid-column: 2/ span 1;
+    justify-self: end;
+}
+.trainer_preview .turnam_descr{
+    grid-row: 3/span 1;
+    grid-column: 1/ span 1;
+}
+.decor_two{
+   grid-row: 2 / span 1;
+   grid-column: 1/ span 1;
+}
+.stars_card_wrapper{
+    display: flex;
+    gap: 22px;
+}
+.stars_card_item{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.stars_card_item img{
+    width: 100%;
+    object-fit: cover;
+
+}
+.flex_row{
+    display: flex;
+   
+    gap: 20px;
+}
+@media(max-width:760px){
+    .breadcrumbs{
+        margin: 40px auto 30px;
+    }
+.first_row{
+    
+    grid-template-columns: 1fr;
+}
+.first_row img {
+    
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.first_row .img_absolute{
+   display: none;
+}
+.hero-text {
+   
+    margin-bottom: 10px;
+    
+}
+.first_row .section__title{
+    padding: 0;
+}
+.second_row {
+   flex-direction: column;
+   margin-top: 20px;
+}
+
+.flex_row{
+    flex-direction: column;
+   margin-top: 20px;
+}
+.trainer_preview{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr;
+}
+.trainer_foto {
+    grid-row: 2/ span 1;
+    grid-column: 1 / span 1;
+    justify-self: center;
+    width: 100%;
+        object-fit: cover;
+}
+.decor_two {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+}
+.trainer_preview .turnam_descr {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
+}
+.stars_card_wrapper {
+    display: flex;
+    gap: 10px;
+}
+.stars_card_item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+}
+/*------end*/
+
+/*footer css*/
+:root {
+            --bg-dark: #1c1c1c;
+            --bg-darker: #151515;
+            --accent: #ffd100;
+            --text-main: #ffffff;
+            --text-sub: #9e9e9e;
+            --border-color: #ffffff2a;
+            --font-main: 'Inter';
+             --font-title: "Exo 2", sans-serif;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    padding: 60px 0 20px;
+    
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 25px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #9e9e9e;
+    transition: color 0.3s;
+}
+
+.social-link:hover { color: var(--accent); }
+
+.footer-title {
+     font-size: clamp(14px, 2vw, 20px);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footer-list p{
+ 
+
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+color: #FFFFFF;
+
+
+}
+.footer-list small{
+
+font-weight: 300;
+font-size: 11px;
+line-height: 13px;
+
+color: #FFFFFF;
+
+opacity: 0.6;
+
+}
+
+.footer-list.grid-2 {
+    
+    grid-template-columns: 1fr 1fr;
+    min-width: 300px;
+}
+
+.footer-list a {
+    color: #9e9e9e;
+    font-size: clamp(11px, 2vw, 16px);
+    transition: color 0.2s;
+    font-weight:300;
+}
+
+.footer-list a:hover { color: #fff; }
+
+.contact-item {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.contact-item .icon { color: var(--accent); }
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+.contact-item svg{
+    width: 16px;
+    height: 16px;
+    fill:#ffd100;
+}
+.footer .btn{
+     background-color: var(--accent);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 25px;
+           
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            
+            text-transform: none;
+}
+/* Мобильный футер (как на втором фото) */
+@media (max-width: 992px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footer-col.logo-col {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 30px;
+    }
+
+    .footer-title {
+        margin-bottom: 0;
+        padding: 20px 0;
+       
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .footer-title::after {
+        content: '∨';
+        font-size: 12px;
+        transition: transform 0.3s;
+    }
+
+    .footer-list {
+        display: none; /* Скрыто для эффекта аккордеона */
+        padding: 15px 0;
+    }
+
+    /* Класс для открытия аккордеона через JS */
+    .footer-col.active .footer-list.grid-2 {
+        display: grid;
+    }
+    
+    .footer-col.active .footer-title::after {
+        transform: rotate(180deg);
+    }
+
+    .footer-list.grid-2 {
+        grid-template-columns: 1fr;
+        min-width: unset;
+    }
+}
+/*end----*/
+/*header css*/
+
+:root {
+            --bg-dark: #1c1c1c;
+            --bg-darker: #151515;
+            --accent: #ffd100;
+            --text-main: #ffffff;
+            --text-sub: #9e9e9e;
+            --border-color: #ffffff2a;
+            --font-main: 'Inter';
+             --font-title: "Exo 2", sans-serif;
+}
+
+
+.nav-link, .dropdown-toggle {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE 10+ */
+    user-select: none;         /* Стандарт */
+    -webkit-tap-highlight-color: transparent; /* Убирает синюю вспышку на Android/iOS */
+}
+
+.nav-link:focus, 
+.dropdown-toggle:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.nav-list * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-item {
+  position: relative; /* Важно для позиционирования меню */
+  /* padding: 10px 20px; */
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  
+}
+
+/* Стили выпадающего меню */
+.dropdown-menu {
+  display: none; /* Скрываем по умолчанию */
+  position: absolute;
+  top: 100%; /* Показываем сразу под родительским элементом */
+  left: 0;
+  background-color:#1c1c1c;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.dropdown-menu li a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #ffffffd9;
+}
+
+/* Эффект при наведении */
+.dropdown-menu li a:hover {
+  background-color: #2b2b2b;
+}
+
+/* ГЛАВНОЕ: показываем меню при наведении на родителя */
+.has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+   .nav-item.has-dropdown .nav-link::after {
+            content: '▼';
+            font-size: 10px;
+            color: var(--text-sub);
+        }
+
+
+
+/* Когда меню открыто, переворачиваем стрелку */
+.nav-item.is-open .arrow {
+  transform: rotate(180deg);
+}
+ 
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            padding-top: 0; /* Чтобы контент не прятался под фиксированным хедером */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-family: inherit;
+        }
+
+        /* --- DESKTOP HEADER --- */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-dark);
+            z-index: 100;
+            
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-side {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .header-side.right {
+            justify-content: flex-end;
+        }
+
+        .contact-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .contact-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--accent);
+        }
+
+        .contact-info .main-text {
+            font-size: clamp(12px, 2vw, 16px);
+            
+            font-weight: 400;
+            
+        }
+
+        .contact-info .sub-text {
+            font-size: clamp(9px, 1vw, 11px);
+           
+            font-weight: 300;
+            color:#ffffff;
+        }
+
+        .logo-center {
+            margin: 0 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-center img {
+            height: 112px; /* Место под логотип */
+            width: auto;
+        }
+
+        header .btn , .mobile-nav-list .btn{
+            background-color: var(--accent);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 25px;
+           
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            
+            text-transform: none;
+        }
+
+        header .btn:hover {
+            background-color: #e6c800;
+            transform: translateY(-2px);
+        }
+
+        /* Навигация десктоп */
+        .header-bottom {
+            padding: 15px 0;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-item {
+            font-size: 16px;
+            /* font-size: clamp(14px, 1vw, 16px); */
+        }
+
+        .nav-item.has-dropdown {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+      
+
+        /* --- MOBILE HEADER --- */
+        .header-mobile {
+            display: none;
+            padding: 10px 15px;
+            background-color: var(--bg-dark);
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-mobile .logo-mobile img {
+            height: 50px;
+        }
+
+        .header-mobile .mobile-contact {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .burger-btn {
+            background: none;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 5px;
+        }
+
+        .burger-btn span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* --- MOBILE MENU (FULLSCREEN) --- */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bg-dark);
+            z-index: 200;
+            transition: right 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 20px;
+        }
+
+        .mobile-menu-overlay.active {
+            right: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 40px;
+        }
+
+        .close-menu-btn {
+            background: none;
+            color: var(--text-main);
+            font-size: 40px;
+            line-height: 1;
+        }
+
+        .mobile-nav-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+           
+            text-align: center;
+        }
+
+        /* --- MODAL WINDOW --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            padding: 50px 35px;
+            width: 100%;
+            max-width: 480px;
+            position: relative;
+
+
+
+            background: rgba(73, 73, 73, 0.4);
+            border: 1px solid #363A40;
+            backdrop-filter: blur(10px);
+            /* Note: backdrop-filter has minimal browser support */
+            border-radius: 20px;
+
+
+
+        }
+
+        .close-modal-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            color: var(--text-sub);
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal-btn:hover {
+            color: var(--text-main);
+        }
+
+        .modal-content h2 {
+            font-size: clamp(16px, 4vw, 24px);
+            font-family: var(--font-title);
+            text-transform: uppercase;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 1;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px 20px;
+            background-color: #19191966;
+            border: 1px solid #333;
+            border-radius: 25px;
+            font-weight: 300;
+            color:#ffffff;
+            font-size: clamp(12px, 1vw, 16px);
+            outline: none;
+        }
+
+        .form-input::placeholder {
+            color: #ffffffb2;
+        }
+
+        .modal-content .btn {
+            /* Rectangle 16 */
+
+
+            background: linear-gradient(90deg, #FFDD00 0%, #FFBF00 100%);
+            border-radius: 90px;
+            width: 100%;
+
+        }
+
+        .checkbox-group {
+            margin-top: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .checkbox-group input {
+            margin-top: 3px;
+            accent-color: var(--accent);
+        }
+
+        .checkbox-group label {
+            font-size: 10px;
+            color: var(--text-sub);
+            line-height: 1.3;
+        }
+
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            
+            .header {
+                display: none;
+            }
+            .header-mobile {
+                display: flex;
+            }
+            .mobile-nav-list .btn{
+                max-width: 240px;
+
+            }
+        }
+
+        @media (max-width: 768px) {
+  .dropdown-menu {
+    position: static; /* Меню будет раздвигать контент вниз, а не лежать поверх */
+    display: none;    /* По умолчанию скрыто */
+    width: 100%;
+    box-shadow: none;
+    background: #1c1c1c;
+  }
+
+  /* Класс, который будет добавлять JavaScript */
+  .nav-item.is-open .dropdown-menu {
+    display: block;
+  }
+
+  .nav-item.has-dropdown {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+          .nav-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+.nav-item.has-dropdown .nav-link{
+    font-size: 16px;
+}
+.dropdown-menu li a {
+  padding: 2px 6px;}
+}       
+
+/*end-------*/
