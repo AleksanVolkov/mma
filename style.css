@@ -750,6 +750,11 @@ padding: 0;
       font-size: 16px;
 }
 
+.turnam_descr.full{
+     font-weight: 300;
+    font-size: 16px;
+}
+
 p.turnam_descr{
     font-weight: 300;
       color:#ffffff;
