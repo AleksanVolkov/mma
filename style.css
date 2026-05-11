@@ -1358,7 +1358,7 @@ font-size: 24px;
     flex-direction: column;
     gap: 12px;
 }
-.footer-list p{
+.footer-list a.tel_footer{
  
 
 font-weight: 400;
@@ -1379,6 +1379,11 @@ color: #FFFFFF;
 
 opacity: 0.6;
 
+}
+.tel_plus{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .footer-list.grid-2 {
