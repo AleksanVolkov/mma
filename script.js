@@ -132,7 +132,7 @@ const turnirsSliderElem = document.querySelector('#tournaments-slider');
 const parenttTur= document.querySelector('.turnaments_page'); 
 
 
-if (turnirsSliderElem) {
+if (parenttTur && turnirsSliderElem.parentElement.parentElement === parenttTur) {
     new Splide(turnirsSliderElem, {
         type   : 'slide',
         perPage: 1,      // 3 карточки на десктопе
@@ -141,7 +141,7 @@ if (turnirsSliderElem) {
                     cols: 2,
                     gap: {
                         row: '380px',
-                        col: '12px',
+                        col: '20px',
                     },
                 }, 
         pagination: false,
@@ -151,10 +151,10 @@ if (turnirsSliderElem) {
                 perPage: 1,
                 grid: {
                     rows: 3, 
-                    cols: 1,
+                    cols: 2,
                     gap: {
-                        row: '30px',
-                        col: '12px',
+                        row: '250px',
+                        col: '8px',
                     },
                 }, 
                 arrows : true,  
@@ -188,7 +188,7 @@ const parentt= document.querySelector('.news_page');
 
 
 
-if (newsSliderElem.parentElement.parentElement === parentt) {
+if (newsSliderElem && newsSliderElem.parentElement.parentElement === parentt) {
     new Splide(newsSliderElem, {
         type   : 'slide',
         perPage: 1, 
@@ -208,9 +208,9 @@ if (newsSliderElem.parentElement.parentElement === parentt) {
                 perPage: 1,
                 grid: {
                     rows: 3, 
-                    cols: 1,
+                    cols: 2,
                     gap: {
-                        row: '30px',
+                        row: '150px',
                         col: '12px',
                     },
                 }, 
