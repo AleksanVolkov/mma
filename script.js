@@ -129,8 +129,40 @@ if (trainersSliderElemPage) {
 
 // 3. Инициализация слайдера турниры (без сетки)
 const turnirsSliderElem = document.querySelector('#tournaments-slider');
+const parenttTur= document.querySelector('.turnaments_page'); 
+
 
 if (turnirsSliderElem) {
+    new Splide(turnirsSliderElem, {
+        type   : 'slide',
+        perPage: 1,      // 3 карточки на десктопе
+        grid: {
+                    rows: 3, 
+                    cols: 2,
+                    gap: {
+                        row: '380px',
+                        col: '12px',
+                    },
+                }, 
+        pagination: false,
+        arrows : false,
+        breakpoints: {
+            1024: {
+                perPage: 1,
+                grid: {
+                    rows: 3, 
+                    cols: 1,
+                    gap: {
+                        row: '30px',
+                        col: '12px',
+                    },
+                }, 
+                arrows : true,  
+            },
+            
+        },
+    }).mount(window.splide.Extensions); // Здесь Extensions больше не нужны, если Grid не используется
+}else if (turnirsSliderElem) {
     new Splide(turnirsSliderElem, {
         type   : 'slide',
         perPage: 2,      // 3 карточки на десктопе
@@ -151,6 +183,8 @@ if (turnirsSliderElem) {
 // 3. Инициализация слайдера новости (без сетки)
 const newsSliderElem = document.querySelector('#news-slider');
 const parentt= document.querySelector('.news_page'); 
+
+
 
 
 
@@ -176,7 +210,7 @@ if (newsSliderElem.parentElement.parentElement === parentt) {
                     rows: 3, 
                     cols: 1,
                     gap: {
-                        row: '12px',
+                        row: '30px',
                         col: '12px',
                     },
                 }, 

@@ -1920,3 +1920,56 @@ opacity: 0.6;
 .news_page .container{
     margin: 0 auto;
 }
+.single_news .container{
+    margin: 0 auto;
+}
+#single_news .section__title{
+    margin-bottom: 0;
+
+}
+.section#single_news, .section.news_page{
+    padding: 0;
+}
+.grid-gallery-news{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 1fr auto auto ;
+    gap: 30px 15px;
+}
+.prev_img{
+    object-fit: cover;
+    width: 100%;
+    grid-row: 1 / span 1;
+    grid-column:1/ span 4 ;
+
+}
+.grid-gallery-news img{
+    width: 100%;
+}
+.turnaments_page.section{
+    padding: 0;
+}
+@media(max-width:820px){
+    .grid-gallery-news{
+        margin-top: 20px;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr auto auto ;
+        gap: 10px 10px;
+
+    }
+    .prev_img{
+    object-fit: cover;
+    width: 100%;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+
+}
+
+    #single_news p.turnam_descr {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+}
+
+
