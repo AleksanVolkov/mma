@@ -741,7 +741,13 @@ padding: 0;
 .turnam_date p, .turnam_locat p{
     font-weight: 400;
       color:#ffffff;
-      font-size:  16px;
+      font-size: clamp(9px, 2vw, 16px);
+}
+
+.turnam_date.full p, .turnam_locat.full p{
+    font-weight: 400;
+      color:#ffffff;
+      font-size: 16px;
 }
 
 p.turnam_descr{
