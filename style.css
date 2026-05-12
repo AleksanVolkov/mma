@@ -1970,7 +1970,7 @@ opacity: 0.6;
 
   .turnam_date, .turnam_locat {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: flex-start;
     
     gap: 5px;
@@ -2144,7 +2144,9 @@ flex-direction: row;
     margin-bottom: 0;
     justify-content: space-between;
    }
-
+ .mobile-nav-list .btn {
+    padding: 18px 40px;
+}
 }
 
 
