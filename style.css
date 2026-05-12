@@ -1090,14 +1090,15 @@ top: -30px;
 p.turnam_descr{
    
      margin-top: 0;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
 }
 .tournaments-card .hero-btn{
     border: none;
+    width: 100%;
         color: #000000;
         /* text-decoration: underline; */
         padding: 12px 20px;
-        font-size: 9px;
+        font-size: 11px;
         font-weight: 400;
         text-align: center;
         background: linear-gradient(90deg, #FFDD00 0%, #FFBF00 100%);
@@ -2129,7 +2130,7 @@ flex-direction: row;
 
     #single_news p.turnam_descr {
         margin-top: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
     .btn_box{
         margin-top: 20px;
