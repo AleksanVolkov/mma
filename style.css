@@ -339,7 +339,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+   
     padding: 17px 0;
     font-size:clamp(11px, 1vw, 16px);
     font-weight: 400;
@@ -884,7 +884,7 @@ grid-row: 1 / span 2;
     filter: grayscale(1) brightness(1) invert(0);
     max-height: 760px;
     max-width: 1630px;
-    margin: 0 auto 50px;
+    margin: 0 auto;
 }
 .map .section__title{
     max-width: 1170px;
@@ -1013,7 +1013,7 @@ grid-row: 1 / span 2;
 }
 
 }
-@media (max-width: 768px) {
+@media (max-width: 1008px) {
     .map{
         padding: 60px 15px 0;
     } 
@@ -1238,7 +1238,7 @@ font-size: 24px;
    
     gap: 20px;
 }
-@media(max-width:760px){
+@media(max-width:1060px){
     .breadcrumbs{
         margin: 40px auto 30px;
     }
@@ -1318,7 +1318,7 @@ font-size: 24px;
 
 .footer {
     background-color: #1a1a1a;
-    padding: 60px 0 20px;
+    padding: 150px 0 20px;
     
     color: #fff;
 }
@@ -1435,6 +1435,13 @@ opacity: 0.6;
 }
 /* Мобильный футер (как на втором фото) */
 @media (max-width: 992px) {
+
+    .footer {
+    background-color: #1a1a1a;
+    padding: 60px 0 20px;
+    
+    color: #fff;
+}
     .footer-content {
         flex-direction: column;
         gap: 0;
@@ -1933,7 +1940,7 @@ opacity: 0.6;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
   .dropdown-menu {
     position: static; /* Меню будет раздвигать контент вниз, а не лежать поверх */
     display: none;    /* По умолчанию скрыто */
@@ -2092,6 +2099,18 @@ flex-direction: row;
 .contacts_page_map.section{
     padding: 50px 0 0;
 }
+#tournaments-slider-list .splide__slide__row, #news-slider-list .splide__slide__row{
+    height: auto !important;
+}
+
+.btn--outline{
+    width: 100%;
+}
+
+
+
+
+
 @media(max-width:820px){
     .grid-gallery-news{
         margin-top: 20px;
@@ -2147,6 +2166,10 @@ flex-direction: row;
    }
  .mobile-nav-list .btn {
     padding: 18px 40px;
+     width: 100%;
+}
+.mobile-menu-header{
+
 }
 }
 

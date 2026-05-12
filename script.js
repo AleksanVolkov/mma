@@ -140,7 +140,7 @@ if (parenttTur && turnirsSliderElem.parentElement.parentElement === parenttTur) 
                     rows: 3, 
                     cols: 2,
                     gap: {
-                        row: '380px',
+                        row: '30px',
                         col: '20px',
                     },
                 }, 
@@ -153,7 +153,7 @@ if (parenttTur && turnirsSliderElem.parentElement.parentElement === parenttTur) 
                     rows: 3, 
                     cols: 2,
                     gap: {
-                        row: '250px',
+                        row: '20px',
                         col: '8px',
                     },
                 }, 
@@ -196,7 +196,7 @@ if (newsSliderElem && newsSliderElem.parentElement.parentElement === parentt) {
                     rows: 3, 
                     cols: 3,
                     gap: {
-                        row: '280px',
+                        row: '12px',
                         col: '12px',
                     },
                 },     // 3 карточки на десктопе
@@ -210,7 +210,7 @@ if (newsSliderElem && newsSliderElem.parentElement.parentElement === parentt) {
                     rows: 3, 
                     cols: 2,
                     gap: {
-                        row: '150px',
+                        row: '12x',
                         col: '12px',
                     },
                 }, 
