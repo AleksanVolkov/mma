@@ -339,7 +339,8 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 17px 70px;
+    width: 100%;
+    padding: 17px 0;
     font-size:clamp(11px, 1vw, 16px);
     font-weight: 400;
     text-transform: none;
