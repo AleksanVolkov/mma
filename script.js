@@ -277,3 +277,17 @@ new Splide(newsSliderElem, {
             }
         });
     });
+
+
+
+    
+        const daySelect = document.getElementById('daySelect');
+        const scheduleGrid = document.getElementById('scheduleGrid');
+
+        daySelect.addEventListener('change', function() {
+            // Удаляем текущий класс отображения дня
+            scheduleGrid.classList.remove('show-mon', 'show-tue', 'show-wed','show-thur','show-fri','show-sat','show-sun');
+            // Добавляем новый
+            scheduleGrid.classList.add('show-' + this.value);
+        });
+    
