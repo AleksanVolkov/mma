@@ -2108,10 +2108,14 @@ flex-direction: row;
     width: 100%;
 }
 
+.section.aboutus{
+    padding: 50px 0 0;
+}
 
 
-
-
+.faq.section{
+    padding: 150px 0 0;
+}
 @media(max-width:820px){
     .grid-gallery-news{
         margin-top: 20px;
@@ -2169,8 +2173,11 @@ flex-direction: row;
     padding: 18px 40px;
      width: 100%;
 }
-.mobile-menu-header{
-
+.section.aboutus{
+    padding: 0;
+}
+.faq.section{
+    padding: 60px 0 0;
 }
 }
 

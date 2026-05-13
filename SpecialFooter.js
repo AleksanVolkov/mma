@@ -30,7 +30,7 @@ class SpecialFooter extends HTMLElement {
                     <div class="footer-col accordion">
                         <h3 class="footer-title">Навигация</h3>
                         <div class="footer-list grid-2">
-                            <a href="#">О клубе</a>
+                            <a href="./aboutus.html">О клубе</a>
                             <a href="#">Расписание</a>
                             <a href="./coaches.html">Тренеры</a>
                             <a href="#">Галерея</a>

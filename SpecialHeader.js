@@ -51,7 +51,7 @@ class SpecialHeader extends HTMLElement {
 
             <nav class="header-bottom">
                 <ul class="nav-list">
-                    <li><a href="#" class="nav-item">О клубе</a></li>
+                    <li><a href="./aboutus.html" class="nav-item">О клубе</a></li>
                     <ul class="nav-list">
                         <li class="nav-item has-dropdown">
                         <span class="nav-link">Направления</span>
@@ -103,7 +103,7 @@ class SpecialHeader extends HTMLElement {
             <button class="close-menu-btn js-close-menu">&times;</button>
         </div>
         <ul class="mobile-nav-list">
-            <li><a href="#">О клубе</a></li>
+            <li><a href="./aboutus.html">О клубе</a></li>
             <ul class="nav-list">
                         <li class="nav-item has-dropdown">
                         <span class="nav-link">Направления</span>
