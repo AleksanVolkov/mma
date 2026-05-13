@@ -98,6 +98,451 @@
 
         <!-- FAQ (Аккордеон) -->
 
+
+
+
+        <div class="overlay_img_two">
+           
+            <section class="news section" id="news">
+            <div class="container ">
+                <div class="section__header">
+                    <h2 class="section__title">РАСПИСАНИЕ ТРЕНИРОВОК</h2>
+                </div>
+            </div>
+
+            
+<div class="schedule-container">
+        <!-- Выбор дня для мобильной версии -->
+        <select class="day-selector-mobile" id="daySelect">
+            <option value="mon">Понедельник</option>
+            <option value="tue">Вторник</option>
+            <option value="wed">Среда</option>
+            <option value="thur">Четверг</option>
+            <option value="fri">Пятница</option>
+            <option value="sat">Суббота</option>
+            <option value="sun">Воскресенье</option>
+        </select>
+
+        <div class="grid-wrapper show-mon" id="scheduleGrid">
+            <!-- Строка заголовков (Десктоп) -->
+            <div class="cell header-cell time-header"></div>
+            <div class="cell header-cell">Понедельник</div>
+            <div class="cell header-cell">Вторник</div>
+            <div class="cell header-cell">Среда</div>
+            <div class="cell header-cell">Четверг</div>
+            <div class="cell header-cell">Пятница</div>
+            <div class="cell header-cell">Суббота</div>
+            <div class="cell header-cell">Воскресенье</div>
+
+            <!-- Ряд 11:00 (grid-row: 2) -->
+            <div class="cell time-cell" style="grid-row: 2;">11:00</div>
+            <div class="cell day-content day-mon" style="grid-row: 2;"></div>
+            <div class="cell day-content day-tue" style="grid-row: 2;"></div>
+            
+            <div class="cell day-content day-wed" style="grid-row: 2;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-thur" style="grid-row: 2;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-fri" style="grid-row: 2;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sat" style="grid-row: 2;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Дети и Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sun" style="grid-row: 2;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+
+            <!-- Ряд 15:00 (grid-row: 3) -->
+            <div class="cell time-cell" style="grid-row: 3;">12:00</div>
+            <div class="cell day-content day-mon" style="grid-row: 3;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-tue" style="grid-row: 3;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-wed" style="grid-row: 3;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-thur" style="grid-row: 3;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-fri" style="grid-row: 3;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sat" style="grid-row: 3;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Дети и Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sun" style="grid-row: 3;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+
+            <!-- Ряд 16:00 (grid-row: 4) -->
+            <div class="cell time-cell" style="grid-row: 4;">15:00</div>
+            <div class="cell day-content day-mon" style="grid-row: 4;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-tue" style="grid-row: 4;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-wed" style="grid-row: 4;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-thur" style="grid-row: 4;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-fri" style="grid-row: 4;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sat" style="grid-row: 4;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Дети и Младшая группа</span>
+                </div>
+            </div>
+            
+            <div class="cell day-content day-sun" style="grid-row: 4;"></div>
+
+            <!-- Ряд 19:00 (grid-row: 5) -->
+            <div class="cell time-cell" style="grid-row: 5;">16:00</div>
+            <div class="cell day-content day-mon" style="grid-row: 5;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-tue" style="grid-row: 5;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-wed" style="grid-row: 5;">
+            </div>
+            <div class="cell day-content day-thur" style="grid-row: 5;">
+            </div>
+            <div class="cell day-content day-fri" style="grid-row: 5;">
+            </div>
+            <div class="cell day-content day-sat" style="grid-row: 5;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Дети и Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sun" style="grid-row: 5;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+
+
+            <div class="cell time-cell" style="grid-row: 6;">17:00</div>
+            <div class="cell day-content day-mon" style="grid-row: 6;"></div>
+            <div class="cell day-content day-tue" style="grid-row: 6;"></div>
+            
+            <div class="cell day-content day-wed" style="grid-row: 6;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-thur" style="grid-row: 6;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-fri" style="grid-row: 6;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sat" style="grid-row: 6;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Дети и Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sun" style="grid-row: 6;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+
+            <div class="cell time-cell" style="grid-row: 7;">18:00</div>
+            <div class="cell day-content day-mon" style="grid-row: 7;"></div>
+            <div class="cell day-content day-tue" style="grid-row: 7;"></div>
+            
+            <div class="cell day-content day-wed" style="grid-row: 7;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-thur" style="grid-row: 7;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-fri" style="grid-row: 7;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sat" style="grid-row: 7;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Дети и Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sun" style="grid-row: 7;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+
+
+            <div class="cell time-cell" style="grid-row: 8;">19:00</div>
+            <div class="cell day-content day-mon" style="grid-row: 8;"></div>
+            <div class="cell day-content day-tue" style="grid-row: 8;"></div>
+            
+            <div class="cell day-content day-wed" style="grid-row: 8;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-thur" style="grid-row: 8;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-fri" style="grid-row: 8;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sat" style="grid-row: 8;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Дети и Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sun" style="grid-row: 8;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+
+
+            <div class="cell time-cell" style="grid-row: 9;">20:00</div>
+            <div class="cell day-content day-mon" style="grid-row: 9;"></div>
+            <div class="cell day-content day-tue" style="grid-row: 9;"></div>
+            
+            <div class="cell day-content day-wed" style="grid-row: 9;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-thur" style="grid-row: 9;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-fri" style="grid-row: 9;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sat" style="grid-row: 9;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Дети и Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sun" style="grid-row: 9;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+
+
+
+            <div class="cell time-cell" style="grid-row: 10;">21:00</div>
+            <div class="cell day-content day-mon" style="grid-row: 10;"></div>
+            <div class="cell day-content day-tue" style="grid-row: 10;"></div>
+            
+            <div class="cell day-content day-wed" style="grid-row: 10;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-thur" style="grid-row: 10;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-fri" style="grid-row: 10;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sat" style="grid-row: 10;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Дети и Младшая группа</span>
+                </div>
+            </div>
+            <div class="cell day-content day-sun" style="grid-row: 10;">
+                <div class="training-card">
+                    <span class="type">Кикбоксинг</span>
+                    <span class="accent">15:00 - 16:30</span>
+                    <span class="age">Младшая группа</span>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+</section>
+        </div>
+
+
+
+
+
+
+
+
+
 <section class="tournaments_pre section" >
             <div class="container img_grid ">
                 <div class="two_col_img">

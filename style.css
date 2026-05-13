@@ -2215,7 +2215,7 @@ flex-direction: row;
 } */
 .cell{
     /* height: 56px; */
-    padding: 14px 10px;
+    padding: 18px 10px;
     max-width: 136px; 
   
     max-height: 82px;
@@ -2329,19 +2329,8 @@ grid-template-rows: repeat(9, 1fr);
             --text-muted: #888;
         }
 
-        body {
-            
-            color: var(--text-main);
-           
-            margin: 0;
-            padding: 20px;
-        }
+        
 
-        h1 {
-            text-transform: uppercase;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
 
         /* --- Контейнер сетки --- */
         .schedule-container {
