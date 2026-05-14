@@ -151,11 +151,11 @@ class SpecialHeader extends HTMLElement {
     }
 }
 
-// Регистрируем новый элемент
+
 customElements.define('special-header', SpecialHeader);
 
 document.addEventListener('DOMContentLoaded', () => {
-            // Mobile Menu Logic
+           
             const btnOpenMenu = document.querySelector('.js-open-menu');
             const btnCloseMenu = document.querySelector('.js-close-menu');
             const mobileMenu = document.getElementById('mobileMenu');
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = ''; 
             });
 
-            // Modal Logic
+            
             const btnsOpenModal = document.querySelectorAll('.js-open-modal');
             const btnCloseModal = document.querySelector('.js-close-modal');
             const modal = document.getElementById('trialModal');
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                     modal.classList.add('active');
                     document.body.style.overflow = 'hidden';
-                    // Если модалка открывается из мобильного меню, закрываем меню
+                    
                     if(mobileMenu.classList.contains('active')) {
                         mobileMenu.classList.remove('active');
                     }
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = '';
             });
 
-            // Закрытие модального окна по клику вне области контента
+            
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
                     modal.classList.remove('active');

@@ -55,7 +55,7 @@ class SpecialFooter extends HTMLElement {
     }
 
     initAccordion() {
-        // Ищем заголовки внутри ТЕКУЩЕГО элемента (this)
+        
         const titles = this.querySelectorAll('.footer-title');
         
         titles.forEach(title => {

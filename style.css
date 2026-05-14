@@ -8,7 +8,7 @@ html{
     margin: 180px auto 0;
 }
 
-/* Контейнер кастомной навигации */
+
 .custom-slider-nav {
       display: flex;
     align-items: center;
@@ -21,11 +21,11 @@ html{
     margin: 0 auto;
 }
 
-/* Кнопки стрелок */
+
 .nav-arrow {
   background: none;
   border: none;
-  color: #a0a0a0; /* Серый цвет неактивных элементов */
+  color: #a0a0a0; 
   font-size: 24px;
   cursor: pointer;
   padding: 0;
@@ -34,7 +34,7 @@ html{
 }
 
 .nav-arrow:hover {
-  color: #FFDD00; /* Желтый цвет при наведении */
+  color: #FFDD00; 
 }
 
 /* Цифры */
@@ -44,11 +44,11 @@ html{
 }
 
 .current-num {
-  color: #FFCC00; /* Желтый акцент для текущего слайда */
+  color: #FFCC00; 
 }
 
 .total-num {
-  color: #666666; /* Темно-серый для общего количества */
+  color: #666666; 
 }
 
 /* Прогресс-бар */
@@ -67,7 +67,7 @@ html{
   height: 100%;
   width: 0%; /* Ширина будет меняться через JS */
   background-color: #FFCC00;
-  transition: width 0.4s ease-in-out; /* Плавная анимация заполнения */
+  transition: width 0.4s ease-in-out; 
 }
 
 
@@ -78,11 +78,11 @@ html{
 }
 
 body {
-  font-family: 'Arial', sans-serif; /* Замените на ваш шрифт, например Montserrat или Roboto */
+  font-family: 'Arial', sans-serif; 
  
 }
 
-/* Главная секция */
+
 .hero-section {
     position: relative;
     max-width: 1620px;
@@ -105,20 +105,17 @@ body {
     margin: 0 auto;
     padding: 0 20px;
  }
-/* Затемняющий градиент, чтобы текст всегда был читаемым */
 
-
-/* Контейнер для выравнивания */
 .hero-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
-  z-index: 2; /* Поднимаем текст над фоном и градиентом */
+  z-index: 2; 
 }
 
-/* Блок с текстом */
+
 .hero-content {
     position: relative;
   max-width: 600px;
@@ -127,10 +124,10 @@ body {
 .hero-title {
     font-family: var(--font-title);
   color: #ffffff;
-  /* clamp делает шрифт адаптивным: минимум 32px, идеально 4vw, максимум 54px */
+  
   font-size: clamp(24px, 4vw, 48px);
   font-weight: 800;
-  font-style: italic; /* Судя по макету, шрифт наклонный */
+  font-style: italic; 
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 24px;
@@ -154,7 +151,7 @@ body {
    background: linear-gradient(90deg, #FFDD00 0%, #FFBF00 100%);
   color: #111111;
   padding: 17px 48px;
-  border-radius: 50px; /* Делает кнопку овальной */
+  border-radius: 50px; 
   text-decoration: none;
   font-weight: 600;
   font-size: clamp(11px, 1.5vw, 16px);
@@ -169,15 +166,15 @@ body {
 /* Декоративная большая цифра */
 .hero-decor-number {
   position: absolute;
-  right: -5%; /* Немного сдвигаем за край */
-  bottom: 10%; /* Сдвигаем вниз */
-  font-size: clamp(150px, 20vw, 300px); /* Огромный адаптивный размер */
+  right: -5%; 
+  bottom: 10%; 
+  font-size: clamp(150px, 20vw, 300px); 
   font-weight: 900;
   font-style: italic;
   color: #FFDE00;
   line-height: 0.8;
-  z-index: 1; /* Позади текста, но над фоном */
-  user-select: none; /* Запрещаем выделение текста */
+  z-index: 1; 
+  user-select: none; 
 }
 .hero-decor-number img{
     width: 410px;
@@ -208,14 +205,14 @@ margin-top: 10px;
    background: linear-gradient(90deg, #FFDD00 0%, #FFBF00 100%);
   color: #111111;
   padding: 17px 48px;
-  border-radius: 50px; /* Делает кнопку овальной */
+  border-radius: 50px; 
   text-decoration: none;
   font-weight: 600;
   font-size:  16px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* --- Адаптивность для мобильных устройств --- */
+
 @media (max-width: 768px) {
   .hero-section {
     min-height: 480px;
@@ -232,7 +229,7 @@ margin-top: 10px;
   }
 
   .hero-decor-number {
-    /* На мобильных цифру можно сделать менее прозрачной или спрятать, чтобы не мешала тексту */
+    
     
     right: 0;
     bottom: 50px;
@@ -275,12 +272,12 @@ margin-top: 10px;
 
 
 
-/* Базовые настройки и переменные */
+
 :root {
     --color-bg: #1C1C1C;
     --color-text: #ffffff;
     --color-text-muted: #ffffff;
-    --color-accent: #ffcc00; /* Желтый цвет из макета */
+    --color-accent: #ffcc00; 
     --color-accent-hover: #e6b800;
     --color-card-bg: #1e1e1e;
     --font-title: "Exo 2", sans-serif;
@@ -613,7 +610,7 @@ a {
     gap: 18px;
 }
 }
-/* Адаптив (Резиновость до 390px) */
+
 @media (max-width: 1024px) {
    
     .directions__item {
@@ -631,9 +628,9 @@ a {
     }
     
     .directions__grid {
-        grid-template-columns: 1fr 1fr; /* На мобильном сетка в 1 колонку */
+        grid-template-columns: 1fr 1fr; 
         gap: 8px;
-        /* padding: 0 15px; */
+        
     }
     .directions__item {
     position: relative;
@@ -644,7 +641,7 @@ a {
     
 }
 .section__title {
-    /* padding: 0 15px; */
+   
     margin-bottom: 10px;
     font-weight: 800;
 }
@@ -675,7 +672,7 @@ padding: 0;
 }
 .trainer-card {
     text-align: center;
-    /* padding: 0 15px; */
+    
 }
 
 }
@@ -717,9 +714,7 @@ padding: 0;
 }
 
 
-/* .tournaments-card{
-    height: 380px;
-} */
+
 
 .tournaments-card img{
     height: 380px;
@@ -1111,7 +1106,7 @@ p.turnam_descr{
     border: none;
     width: 100%;
         color: #000000;
-        /* text-decoration: underline; */
+        
         padding: 12px 20px;
         font-size: 11px;
         font-weight: 400;
@@ -1449,7 +1444,7 @@ opacity: 0.6;
             
             text-transform: none;
 }
-/* Мобильный футер (как на втором фото) */
+
 @media (max-width: 992px) {
 
     .footer {
@@ -1487,11 +1482,11 @@ opacity: 0.6;
     }
 
     .footer-list {
-        display: none; /* Скрыто для эффекта аккордеона */
+        display: none; 
         padding: 15px 0;
     }
 
-    /* Класс для открытия аккордеона через JS */
+   
     .footer-col.active .footer-list.grid-2 {
         display: grid;
     }
@@ -1524,7 +1519,7 @@ opacity: 0.6;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none;     /* IE 10+ */
     user-select: none;         /* Стандарт */
-    -webkit-tap-highlight-color: transparent; /* Убирает синюю вспышку на Android/iOS */
+    -webkit-tap-highlight-color: transparent; 
 }
 
 .nav-link:focus, 
@@ -1546,8 +1541,8 @@ opacity: 0.6;
 }
 
 .nav-item {
-  position: relative; /* Важно для позиционирования меню */
-  /* padding: 10px 20px; */
+  position: relative; 
+  
   cursor: pointer;
 }
 
@@ -1558,9 +1553,9 @@ opacity: 0.6;
 
 /* Стили выпадающего меню */
 .dropdown-menu {
-  display: none; /* Скрываем по умолчанию */
+  display: none; 
   position: absolute;
-  top: 100%; /* Показываем сразу под родительским элементом */
+  top: 100%; 
   left: 0;
   background-color:#1c1c1c;
   min-width: 160px;
@@ -1578,12 +1573,12 @@ opacity: 0.6;
   color: #ffffffd9;
 }
 
-/* Эффект при наведении */
+
 .dropdown-menu li a:hover {
   background-color: #2b2b2b;
 }
 
-/* ГЛАВНОЕ: показываем меню при наведении на родителя */
+
 .has-dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -1596,7 +1591,7 @@ opacity: 0.6;
 
 
 
-/* Когда меню открыто, переворачиваем стрелку */
+
 .nav-item.is-open .arrow {
   transform: rotate(180deg);
 }
@@ -1613,7 +1608,7 @@ opacity: 0.6;
             font-family: var(--font-main);
             background-color: var(--bg-dark);
             color: var(--text-main);
-            padding-top: 0; /* Чтобы контент не прятался под фиксированным хедером */
+            padding-top: 0; 
         }
 
         a {
@@ -1632,7 +1627,7 @@ opacity: 0.6;
             font-family: inherit;
         }
 
-        /* --- DESKTOP HEADER --- */
+        
         .header {
             position: fixed;
             top: 0;
@@ -1701,7 +1696,7 @@ opacity: 0.6;
         }
 
         .logo-center img {
-            height: 112px; /* Место под логотип */
+            height: 112px; 
             width: auto;
         }
 
@@ -1721,7 +1716,7 @@ opacity: 0.6;
             transform: translateY(-2px);
         }
 
-        /* Навигация десктоп */
+        
         .header-bottom {
             padding: 15px 0;
         }
@@ -1734,7 +1729,7 @@ opacity: 0.6;
 
         .nav-item {
             font-size: 16px;
-            /* font-size: clamp(14px, 1vw, 16px); */
+            
         }
 
         .nav-item.has-dropdown {
@@ -1861,7 +1856,7 @@ opacity: 0.6;
             background: rgba(73, 73, 73, 0.4);
             border: 1px solid #363A40;
             backdrop-filter: blur(10px);
-            /* Note: backdrop-filter has minimal browser support */
+            
             border-radius: 20px;
 
 
@@ -1914,7 +1909,7 @@ opacity: 0.6;
         }
 
         .modal-content .btn {
-            /* Rectangle 16 */
+            
 
 
             background: linear-gradient(90deg, #FFDD00 0%, #FFBF00 100%);
@@ -1941,7 +1936,7 @@ opacity: 0.6;
             line-height: 1.3;
         }
 
-        /* --- MEDIA QUERIES --- */
+        
         @media (max-width: 992px) {
             
             .header {
@@ -1958,14 +1953,14 @@ opacity: 0.6;
 
         @media (max-width: 1000px) {
   .dropdown-menu {
-    position: static; /* Меню будет раздвигать контент вниз, а не лежать поверх */
-    display: none;    /* По умолчанию скрыто */
+    position: static; 
+    display: none;    
     width: 100%;
     box-shadow: none;
     background: #1c1c1c;
   }
 
-  /* Класс, который будет добавлять JavaScript */
+  
   .nav-item.is-open .dropdown-menu {
     display: block;
   }
@@ -2205,16 +2200,9 @@ flex-direction: row;
     padding: 0 10px;
 }
 
-/* .schedule p{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #FFFFFF;
-    
-} */
+
 .cell{
-    /* height: 56px; */
+    
     padding: 18px 10px;
     max-width: 136px; 
   
@@ -2236,7 +2224,7 @@ font-weight: 400;
 font-size: 12px;
 line-height: 15px;
 text-align: center;
-/* max-width: 85px; */
+
 color: #FFFFFF;
 
 
@@ -2245,7 +2233,7 @@ color: #FFFFFF;
 font-weight: 700;
 font-size: 12px;
 line-height: 15px;
-/* identical to box height */
+
 text-align: center;
 
 color: #FFDD00;
@@ -2256,11 +2244,11 @@ color: #FFDD00;
     padding: 4px 0;
 }
 .age{
-/* max-width: 105px; */
+
 font-weight: 400;
 font-size: 9px;
 
-/* identical to box height */
+
 text-align: center;
 
 color: #5986E8;
@@ -2332,13 +2320,13 @@ grid-template-rows: repeat(9, 1fr);
         
 
 
-        /* --- Контейнер сетки --- */
+        
         .schedule-container {
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Селектор для мобилок (скрыт на десктопе) */
+        
         .day-selector-mobile {
             display: none;
             width: 100%;
@@ -2414,7 +2402,7 @@ appearance: none;
         .training-card.highlight .time-range { color: #000; }
         .training-card .sub { font-size: 10px; color: #55aaff; }
 
-        /* --- Адаптивность (Мобильная версия как на image_e6bc4a.png) --- */
+        
         @media (max-width: 900px) {
 
             .cell{
@@ -2423,17 +2411,17 @@ appearance: none;
             .day-selector-mobile { display: block; }
 
             .grid-wrapper {
-                /* Мобильный: 2 колонки (время и контент дня) */
+                
                 grid-template-columns: 80px 1fr;
             }
 
-            /* Скрываем заголовки дней на мобилке */
+            
             .header-cell:not(.time-header) { display: none; }
 
-            /* Скрываем все карточки дней по умолчанию */
+            
             .day-content { display: none; }
 
-            /* Показываем только карточки выбранного дня (через JS класс) */
+            
             .grid-wrapper.show-mon .day-mon,
             .grid-wrapper.show-tue .day-tue,
             .grid-wrapper.show-wed .day-wed, 
@@ -2442,7 +2430,7 @@ appearance: none;
             .grid-wrapper.show-sat .day-sat,
             .grid-wrapper.show-sun .day-sun{
                 display: flex;
-                grid-column: 2; /* Всегда во вторую колонку */
+                grid-column: 2; 
             }
 
             .time-cell { grid-column: 1; }
@@ -2451,6 +2439,7 @@ appearance: none;
             }
             .overlay_img_two{
                 padding: 60px 0 0;
+                
             }
 
         }

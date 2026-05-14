@@ -70,7 +70,7 @@ if (trainersSliderElem) {
             768: {
                 perPage: 1,
                 gap: 0,
-                // Настройки сетки должны быть внутри объекта grid
+                
                 grid: {
                     rows: 3, 
                     cols: 1,
@@ -81,7 +81,7 @@ if (trainersSliderElem) {
                 },
             },
         },
-    }).mount(window.splide.Extensions); // ВАЖНО: монтируем с расширениями
+    }).mount(window.splide.Extensions); 
 }
 
  // 3. Инициализация слайдера тренеров на странице тренеров
@@ -110,7 +110,7 @@ if (trainersSliderElemPage) {
             600: {
                 perPage: 1,
                 gap: 0,
-                // Настройки сетки должны быть внутри объекта grid
+                
                 grid: {
                     rows: 3, 
                     cols: 1,
@@ -121,7 +121,7 @@ if (trainersSliderElemPage) {
                 },
             },
         },
-    }).mount(window.splide.Extensions); // ВАЖНО: монтируем с расширениями
+    }).mount(window.splide.Extensions); 
 }
 
 
@@ -135,7 +135,7 @@ const parenttTur= document.querySelector('.turnaments_page');
 if (parenttTur && turnirsSliderElem.parentElement.parentElement === parenttTur) {
     new Splide(turnirsSliderElem, {
         type   : 'slide',
-        perPage: 1,      // 3 карточки на десктопе
+        perPage: 1,      
         grid: {
                     rows: 3, 
                     cols: 2,
@@ -161,24 +161,24 @@ if (parenttTur && turnirsSliderElem.parentElement.parentElement === parenttTur) 
             },
             
         },
-    }).mount(window.splide.Extensions); // Здесь Extensions больше не нужны, если Grid не используется
+    }).mount(window.splide.Extensions); 
 }else if (turnirsSliderElem) {
     new Splide(turnirsSliderElem, {
         type   : 'slide',
-        perPage: 2,      // 3 карточки на десктопе
+        perPage: 2,      
         gap    : '12px',
         pagination: false,
         arrows : true,
         breakpoints: {
             1024: {
-                perPage: 2, // 2 карточки на планшетах
+                perPage: 2, 
             },
             768: {
-                perPage: 2, // 1 карточка на мобильных
-                gap    : '10px', // небольшой отступ, чтобы было видно край следующего слайда (опционально)
+                perPage: 2, 
+                gap    : '10px', 
             },
         },
-    }).mount(); // Здесь Extensions больше не нужны, если Grid не используется
+    }).mount(); 
 }
 // 3. Инициализация слайдера новости (без сетки)
 const newsSliderElem = document.querySelector('#news-slider');
@@ -199,7 +199,7 @@ if (newsSliderElem && newsSliderElem.parentElement.parentElement === parentt) {
                         row: '12px',
                         col: '12px',
                     },
-                },     // 3 карточки на десктопе
+                },     
     
         pagination: false,
         arrows : false,
@@ -214,33 +214,30 @@ if (newsSliderElem && newsSliderElem.parentElement.parentElement === parentt) {
                         col: '12px',
                     },
                 }, 
-                arrows : true, // 2 карточки на планшетах
+                arrows : true, 
             },
             
-            // 768: {
-            //     perPage: 2, // 1 карточка на мобильных
-            //     gap    : '10px', // небольшой отступ, чтобы было видно край следующего слайда (опционально)
-            // },
+          
         }
-    }).mount(window.splide.Extensions); // Здесь Extensions больше не нужны, если Grid не используется
+    }).mount(window.splide.Extensions); 
 }else if( newsSliderElem){
 
 new Splide(newsSliderElem, {
         type   : 'slide',
-        perPage: 3,      // 3 карточки на десктопе
+        perPage: 3,      
         gap    : '12px',
         pagination: false,
         arrows : true,
         breakpoints: {
             1024: {
-                perPage: 2, // 2 карточки на планшетах
+                perPage: 2, 
             },
             768: {
-                perPage: 2, // 1 карточка на мобильных
-                gap    : '10px', // небольшой отступ, чтобы было видно край следующего слайда (опционально)
+                perPage: 2, 
+                gap    : '10px', 
             },
         },
-    }).mount(); // Здесь Extensions больше не нужны, если Grid не используется
+    }).mount(); 
 }
 
 
@@ -251,8 +248,7 @@ new Splide(newsSliderElem, {
 
 
 
-    // Примечание: Для слайдеров "Следующий турнир" и "Последние новости" 
-    // создайте аналогичные вызовы new Splide() с нужными селекторами.
+   
 
     // 3. Логика работы FAQ (Аккордеон)
     const faqItems = document.querySelectorAll('.faq__item');
@@ -264,13 +260,13 @@ new Splide(newsSliderElem, {
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
 
-            // Закрываем все открытые вкладки (опционально, если нужен только 1 открытый)
+            
             faqItems.forEach(el => {
                 el.classList.remove('active');
                 el.querySelector('.faq__answer').style.maxHeight = null;
             });
 
-            // Если кликнули по закрытому — открываем
+            
             if (!isActive) {
                 item.classList.add('active');
                 answer.style.maxHeight = answer.scrollHeight + "px";
@@ -285,9 +281,9 @@ new Splide(newsSliderElem, {
         const scheduleGrid = document.getElementById('scheduleGrid');
 
         daySelect.addEventListener('change', function() {
-            // Удаляем текущий класс отображения дня
+            
             scheduleGrid.classList.remove('show-mon', 'show-tue', 'show-wed','show-thur','show-fri','show-sat','show-sun');
-            // Добавляем новый
+            
             scheduleGrid.classList.add('show-' + this.value);
         });
     
